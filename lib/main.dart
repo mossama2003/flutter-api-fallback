@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: BlocProvider(
-        create: (context) => HomeCubit(),
+        create: (context) => HomeCubit(repo),
         child: const HomeScreen(),
       ),
     );
