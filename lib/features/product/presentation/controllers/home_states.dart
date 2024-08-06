@@ -1,6 +1,5 @@
-import 'package:flutter/foundation.dart';
+import 'package:flutter_api_fallback/features/product/data/models/product_model.dart';
 
-@immutable
 abstract class HomeState {}
 
 class HomeInitState extends HomeState {}
@@ -8,9 +7,9 @@ class HomeInitState extends HomeState {}
 class HomeLoadingState extends HomeState {}
 
 class HomeSuccessState extends HomeState {
-  final String data;
+  final List<ProductModel> products;
 
-  HomeSuccessState(this.data);
+  HomeSuccessState(this.products);
 }
 
 class HomeErrorState extends HomeState {
